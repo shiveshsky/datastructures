@@ -1,45 +1,35 @@
-# Definition for a  binary tree node
 from collections import deque
-
-
 class TreeNode:
     def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
+       self.val = x
+       self.left = None
+       self.right = None
 
 
 class Solution:
-    def levelOrder(self, A):
+    def solve(self, A):
         queue = deque()
         queue.append(A)
-        ans = []
         marker = '#'
         queue.append(marker)
-        row = []
+        flag = True
+        odd_sum = 0
+        even_sum = 0
         while len(queue) > 0:
             ele = queue.popleft()
             if ele != "#":
-                row.append(ele.val)
+                if flag:
+                    odd_sum+=ele.val
+                else:
+                    even_sum+=ele.val
                 if ele.left is not None:
                     queue.append(ele.left)
                 if ele.right is not None:
                     queue.append(ele.right)
             else:
-                ans.append(row)
-                row = []
+                flag = not flag
                 if len(queue) == 0:
                     break
                 queue.append("#")
-        return ans
 
-
-root = TreeNode(3)
-e1 = TreeNode(9)
-e2 = TreeNode(20)
-root.left = e1
-root.right = e2
-e3 = TreeNode(15)
-e2.left = e3
-e2.right = TreeNode(7)
-print(Solution().levelOrder(root))
+        return (odd_sum-even_sum)

@@ -1,7 +1,3 @@
-# Definition for a  binary tree node
-from collections import deque
-
-
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -10,36 +6,28 @@ class TreeNode:
 
 
 class Solution:
-    def levelOrder(self, A):
-        queue = deque()
+    def solve(self, A):
+        queue = []
         queue.append(A)
         ans = []
         marker = '#'
         queue.append(marker)
-        row = []
+        flag = True
         while len(queue) > 0:
-            ele = queue.popleft()
+            ele = queue.pop(0)
             if ele != "#":
-                row.append(ele.val)
+                if flag:
+                    ans.append(ele.val)
+                    # row.append(ele.val)
+                    flag=False
                 if ele.left is not None:
                     queue.append(ele.left)
                 if ele.right is not None:
                     queue.append(ele.right)
             else:
-                ans.append(row)
-                row = []
+                flag=True
                 if len(queue) == 0:
                     break
                 queue.append("#")
+
         return ans
-
-
-root = TreeNode(3)
-e1 = TreeNode(9)
-e2 = TreeNode(20)
-root.left = e1
-root.right = e2
-e3 = TreeNode(15)
-e2.left = e3
-e2.right = TreeNode(7)
-print(Solution().levelOrder(root))
