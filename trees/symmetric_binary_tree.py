@@ -18,13 +18,16 @@ class Solution:
         left = self.isMirror(A.left, B.right)
         right = self.isMirror(A.right, B.left)
 
+        # if left and right: # this is correct but was giving TLE
+        #     if A.val == B.val:
+        #         return 1
+        #     else:
+        #         return 0
+        # else:
+        #     return 0
         if left and right:
-            if A.val == B.val:
-                return 1
-            else:
-                return 0
-        else:
-            return 0
+            return 1
+        return 0
 
     def isSymmetric(self, A):
         # mirror = self.mirror_tree(A)
