@@ -5,6 +5,7 @@ class TreeLinkNode:
         self.right = None
         self.next = None
 
+
 class Solution:
     def connect(self, root):
         prev = root
