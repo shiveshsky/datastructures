@@ -3,4 +3,6 @@ class Solution:
     # @param B : list of integers
     # @return an integer
     def solve(self, A, B):
-        pass
+        for i in range(0, len(A)):
+            for j in range(0, i):
+                pass

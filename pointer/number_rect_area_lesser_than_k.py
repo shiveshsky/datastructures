@@ -12,7 +12,9 @@ class Solution:
                 j -= 1
         return cnt
 
-print(Solution().solve([1,2,3,4,5], 5))
+
+if __name__ == '__main__':
+    print(Solution().solve([1,2,3,4,5], 5))
 #
 # print(Solution().solve([5, 10, 20, 100, 105], 5))
 
