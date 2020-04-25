@@ -1,6 +1,3 @@
-from collections import defaultdict
-
-
 class Solution:
     def __init__(self):
         self.mypoles = dict()
@@ -21,11 +18,8 @@ class Solution:
         while (len(q)):
             root = q[0]
             hd = root.hd
-
-            # count function returns 1 if the
-            # container contains an element
-            # whose key is equivalent to hd,
-            # or returns zero otherwise.
+            # we are doing level order traversal using queue
+            # so if two nodes are at same horizontal distance we are keeping it first
             if hd not in m:
                 m[hd] = root.val
             if (root.left):

@@ -7,6 +7,7 @@ class TreeNode:
 
 
 class Solution:
+
 	def inorderTraversal(self, A):
 		stack = []
 		ans = []
