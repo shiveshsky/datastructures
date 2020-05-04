@@ -13,5 +13,6 @@ class Solution:
                 dp[i] += dp[i-2]
         return dp[-1]
 
+
 if __name__ == '__main__':
     print(Solution().numDecodings("075361268549483279131"))
