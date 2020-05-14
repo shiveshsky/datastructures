@@ -31,13 +31,13 @@ class Solve:
         dp = [box.height for box in rotations]
 
         for i in range(0, len(rotations)):
-            for j in range(i-1, -1, -1):
-                if rotations[i].breadth < rotations[j].breadth and rotations[i].length < rotations[j].length and dp[i] < (dp[j] + rotations[i].height):
-                    dp[i] = rotations[i].height + dp[j]
+            for j in range(i - 1, -1, -1):
+                if rotations[i].breadth < rotations[j].breadth and rotations[i].length < rotations[j].length:
+                    dp[i] = max(dp[i], rotations[i].height + dp[j])
         return max(dp)
 
 
 if __name__ == '__main__':
     arr = [Box(4, 6, 7), Box(1, 2, 3),
-           Box(4, 5, 6), Box(10, 12, 32)]
+           Box(4, 5, 6), Box(10, 12, 32)]  # ans = 60
     print(Solve().solve(arr))

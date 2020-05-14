@@ -8,7 +8,7 @@ class Solution:
         for coin in A:
             for i in range(1, B+1):
                 if coin<=i:
-                    dp[i] = dp[ix] + dp[i-coin]
+                    dp[i] = dp[i] + dp[i - coin]
         return dp[-1] % 1000007
 
 

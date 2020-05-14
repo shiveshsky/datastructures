@@ -33,7 +33,7 @@ class MinSubsetSumDiff:
         minsubsetddff = math.inf
         for i in range(0, len(dp_arr)//2):
             if dp_arr[i] == True:
-                minsubsetddff = min(minsubsetddff, range_of_possible_subsets- 2*i)
+                minsubsetddff = min(minsubsetddff, range_of_possible_subsets - 2 * i)
         return minsubsetddff
 
 
