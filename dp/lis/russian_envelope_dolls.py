@@ -30,4 +30,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    print(Solution().maxEnvelopes([[4,5],[4,6],[6,7],[2,3],[1,1]]))
+    print(Solution().maxEnvelopes([[4, 5], [4, 6], [6, 7], [2, 3], [1, 1]]))

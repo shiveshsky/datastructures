@@ -1,6 +1,6 @@
 class CountSubsetGivenSum:
     def solve(self, arr, givensum):
-        dp = [[False for i in range(givensum + 1)] for j in range(len(arr))]
+        dp = [[0 for i in range(givensum + 1)] for j in range(len(arr))]
         for i in range(givensum + 1):
             dp[0][i] = 0
         for j in range(len(arr)):

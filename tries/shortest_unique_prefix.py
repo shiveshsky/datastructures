@@ -49,7 +49,7 @@ class Solution:
         child = parent.children.get(ch)
         if child is not None:
             prefix += child.val
-            if child.freq==1:
+            if child.freq == 1:
                 return prefix
             else:
                 return self.search_prefix(child, rem, prefix)

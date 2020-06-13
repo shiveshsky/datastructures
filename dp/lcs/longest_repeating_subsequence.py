@@ -4,7 +4,7 @@ class Solution:
     # @return an integer
     def solve(self, A):
         B = A
-        lcs = []
+        lcs = list()
         for row in range(0, len(A)+1):
             ro = []
             for col in range(0, len(B)+1):

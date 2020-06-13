@@ -21,11 +21,6 @@ class Solve:
         start = [0]
         end = [0]
         global_sum = 0
-        top_right_x = 0
-        top_right_y = 0
-
-        bottom_x = 0
-        bottom_y = 0
 
         for i in range(0, len(arr[0])):
             temp = [0] * len(arr)

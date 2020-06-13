@@ -51,3 +51,4 @@ class ZeroOneKnapsack:
                 else:
                     dp[i][j] = dp[i-1][j]
         return dp[-1][-1]
+
