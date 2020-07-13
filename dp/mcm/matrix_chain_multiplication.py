@@ -6,7 +6,7 @@ class MCM:
         if j <= i:
             return 0
         tmp = math.inf
-        for k in range(i, j - 1):
+        for k in range(i, j):
             tmp = min(self.solve_recc(arr, i, k) + self.solve_recc(arr, k + 1, j) + arr[i - 1] * arr[k] * arr[j], tmp)
         return tmp
 

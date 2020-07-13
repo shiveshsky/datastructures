@@ -14,7 +14,7 @@ class Solution:
                 if num[i - 1] <= j:
                     # TODO take into consideration j-num[i-1] is positive index
                     # else in python it will come from other side :
-                    dp[j] = min(dp[j - num[i - 1]], dp[j])
+                    dp[j] = min(dp[j - num[i - 1]] + 1, dp[j])
         for i in range(weight // 2, 0, -1):
             if dp[i] != math.inf:
                 return dp[i]

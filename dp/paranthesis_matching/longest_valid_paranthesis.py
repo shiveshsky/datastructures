@@ -13,6 +13,8 @@ class Solution:
                 else:
                     sum = max(sum, i-stack[-1])
         return sum
+
+
 if __name__ == '__main__':
     print(Solution().longestValidParentheses("()("))
 

@@ -1,4 +1,5 @@
 class Solution:
+    # O(n^2)
     def wordBreak(self, s, word_dict):
         stack = [1]
         for i in range(0, len(s)):

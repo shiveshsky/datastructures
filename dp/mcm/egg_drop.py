@@ -3,10 +3,7 @@ import math
 
 class Solve:
     def solve(self, floors, eggs):
-        if floors <= 1:
-            return floors
-
-        if eggs == 1:
+        if floors <= 1 or eggs == 1:
             return floors
 
         mintmp = math.inf

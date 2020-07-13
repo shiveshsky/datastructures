@@ -17,6 +17,7 @@ class Solution:
             ans = max(ans, left_max[i] + C*A[i] + right_max[i])
         return ans
 
+
 if __name__ == '__main__':
     print(Solution().solve())
 

@@ -31,11 +31,11 @@ class MinSubsetSumDiff:
         '''
         # possible_sums = [i for i in range(0, len(dp_arr)) if dp_arr[i]]
         minsubsetddff = math.inf
-        for i in range(0, len(dp_arr)//2):
+        for i in range(0, range_of_possible_subsets // 2 + 1):
             if dp_arr[i] == True:
-                minsubsetddff = min(minsubsetddff, range_of_possible_subsets - 2 * dp_arr[i])
+                minsubsetddff = min(minsubsetddff, range_of_possible_subsets - (2 * i))
         return minsubsetddff
 
 
 if __name__ == '__main__':
-    print(MinSubsetSumDiff().solve([1, 6, 11, 5]))
+    print(MinSubsetSumDiff().solve([1, 2, 4, 7]))
