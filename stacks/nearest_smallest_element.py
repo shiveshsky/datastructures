@@ -16,7 +16,6 @@ class Solution:
                     stk.append(i)
 
         return ans
-
-print(Solution().prevSmaller([4, 5, 2, 10, 8]))
-print(Solution().prevSmaller([34, 35, 27, 42, 5, 28, 39, 20, 28]))
-
+if __name__ == '__main__':
+    print(Solution().prevSmaller([4, 5, 2, 10, 8]))
+    print(Solution().prevSmaller([34, 35, 27, 42, 5, 28, 39, 20, 28]))

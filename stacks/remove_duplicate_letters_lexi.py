@@ -13,13 +13,13 @@ class Solution:
                 visited.add(char)
                 cnt[char] -= 1
             else:
-                if char not in visited and stk[-1]<=char:
+                if char not in visited and stk[-1] <= char:
                     stk.append(char)
                     visited.add(char)
-                    cnt[char] -=1
+                    cnt[char] -= 1
                 else:
-                    while len(stk)>0 and stk[-1]>char:
-                        if cnt[stk[-1]]>0 and char not in visited:
+                    while len(stk) > 0 and stk[-1] > char:
+                        if cnt[stk[-1]] > 0 and char not in visited:
                             popper = stk.pop()
                             visited.remove(popper)
                         else:
@@ -27,7 +27,7 @@ class Solution:
                     if char not in visited:
                         stk.append(char)
                         visited.add(char)
-                    cnt[char]-=1
+                    cnt[char] -= 1
         return "".join(stk)
 
 

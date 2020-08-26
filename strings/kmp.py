@@ -53,9 +53,9 @@ class Solution:
                         i += 1
         return lps
 
-print(Solution().lps("banana"))
-print(Solution().lps("babb"))
-print(Solution().lps("hqghumeaylnlfdxfi"))
-print(Solution().lps("abc"))
-print(Solution().strStr("bbaabbbbbaabbaabbbbbbabbbabaabbbabbabbbbababbbabbabaaababbbaabaaaba", "babaaa"))
 
+print(Solution().lps("banana"))
+# print(Solution().lps("babb"))
+# print(Solution().lps("hqghumeaylnlfdxfi"))
+# print(Solution().lps("abc"))
+# print(Solution().strStr("bbaabbbbbaabbaabbbbbbabbbabaabbbabbabbbbababbbabbabaaababbbaabaaaba", "babaaa"))
