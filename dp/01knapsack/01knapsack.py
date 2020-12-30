@@ -10,7 +10,7 @@ class ZeroOneKnapsack:
         else:
             if weights[-1] <= W:
                 return max(
-                    self.recc(vals[0:-1], weights[0:-1], W - weights[0]),
+                    vals[-1] + self.recc(vals[0:-1], weights[0:-1], W - weights[-1]),
                     self.recc(vals[:-1], weights[:-1], W),
                 )
             else:
@@ -39,7 +39,7 @@ class ZeroOneKnapsack:
                 return dp[vals[-1]][weights[-1]]
 
     def top_down(self, vals, weights, W):
-        dp = [[-1 for i in range(0, W + 1)] for j in range(0, len(vals) + 1)]
+        dp = [[-1 for _ in range(0, W + 1)] for __ in range(0, len(vals) + 1)]
         for i in range(len(vals)+1):
             dp[i][0] = 0
         for j in range(W+1):

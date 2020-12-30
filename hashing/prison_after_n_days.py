@@ -1,4 +1,5 @@
 '''https://www.youtube.com/watch?v=secuBlDy0YQ&feature=youtu.be'''
+from typing import List
 
 
 class Solution:

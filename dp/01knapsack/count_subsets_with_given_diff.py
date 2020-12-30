@@ -5,8 +5,8 @@ class SubsetsWithGivenDiff:
             s1 + s2 = sumarr ----(1)
             s1 - s2 = diff ------(2)
           ---------------------
-            2s1 = sumarr - diff
-            s1  = (sumarr - diff)//2
+            2s2 = sumarr - diff
+            s2  = (sumarr - diff)//2
             so this reduces to count subsets with given sum
         '''
         sumarr = sum(arr)

@@ -1,6 +1,10 @@
 class TargetSum:
     def solve(self, arr, diff):
         '''
+            Q=> assign symbol +, - before each number to reach a given sum
+            basically we accumulate all positive and negative into s1 and s2 and
+            apply subset with given diff
+
             - this quesiton states we have to find target sum by doing some plus and minus ops
               and total ways we can do it
             - so basically its s1 - s2 (some positive some negative)
@@ -24,8 +28,8 @@ class TargetSum:
             dp[j][0] = 1
         for i in range(1, len(arr)+1):
             for j in range(1, req_sum+1):
-                if arr[i-1]<=j:
-                    dp[i][j] = dp[i-1][j-arr[i-1]] + dp[i-1][j]
+                if arr[i - 1] <= j:
+                    dp[i][j] = dp[i - 1][j - arr[i - 1]] + dp[i - 1][j]
                 else:
                     dp[i][j] = dp[i-1][j]
         return dp[-1][-1]

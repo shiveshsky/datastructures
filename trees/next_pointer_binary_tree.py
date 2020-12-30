@@ -6,6 +6,8 @@ class TreeLinkNode:
         self.next = None
 
 
+# TODO do usign queue level order traversal
+
 class Solution:
     def connect_loop(self, root):
         prev = root

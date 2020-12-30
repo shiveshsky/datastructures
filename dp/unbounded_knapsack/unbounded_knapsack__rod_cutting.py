@@ -13,7 +13,6 @@ class UnboundedKnapsack:
             dp[0][j] = 0
         for i in range(1, len(dp)):
             for j in range(1, len(dp[0])):
-
                 if weights[i - 1] <= j:
                     dp[i][j] = max(vals[i - 1] + dp[i][j - weights[i - 1]], dp[i - 1][j])
                 else:

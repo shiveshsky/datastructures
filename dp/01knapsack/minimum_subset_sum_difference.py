@@ -29,10 +29,9 @@ class MinSubsetSumDiff:
                 so s1 -(sumarr-s1)
                 we have to minimize sumarr - 2s1 
         '''
-        # possible_sums = [i for i in range(0, len(dp_arr)) if dp_arr[i]]
         minsubsetddff = math.inf
         for i in range(0, range_of_possible_subsets // 2 + 1):
-            if dp_arr[i] == True:
+            if dp_arr[i] is True:
                 minsubsetddff = min(minsubsetddff, range_of_possible_subsets - (2 * i))
         return minsubsetddff
 
